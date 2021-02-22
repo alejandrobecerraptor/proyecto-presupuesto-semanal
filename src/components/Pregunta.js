@@ -1,10 +1,11 @@
+import { getDefaultNormalizer } from '@testing-library/react';
 import React,{Fragment, useState} from 'react';
 
 const Pregunta = () => {
 
     //definir el state
     const [ cantidad, guardarCantidad] = useState(0);
-
+    const [ error, guardarError] = useState(false);
     //funcion que lee el presupuesto
     const definirPresupuesto = e => {
         guardarCantidad(parseInt(e.target.value,10))
@@ -16,13 +17,18 @@ const Pregunta = () => {
         e.preventDefault();
        
         //validar
-        
+        if(cantidad < 1 || isNaN(cantidad)){
+            guardarError(true);
+            return;
+        }
 
         //si se pasa la validacion
+        guardarError(false);
     }
     return ( 
         <Fragment>
             <h2>Coloca tu Presupuesto</h2>
+            {error ? "Error papi" : null}
             <form onSubmit={agregarPresupuesto}>
                 <input
                     type="number"
