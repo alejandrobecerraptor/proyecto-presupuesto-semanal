@@ -1,7 +1,7 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React,{Fragment, useState} from 'react';
 import Error from './Error';
-const Pregunta = () => {
+const Pregunta = ({guardarPresupuesto,guardarRestante}) => {
 
     //definir el state
     const [ cantidad, guardarCantidad] = useState(0);
@@ -24,6 +24,8 @@ const Pregunta = () => {
 
         //si se pasa la validacion
         guardarError(false);
+        guardarPresupuesto(cantidad);
+        guardarRestante(cantidad);
     }
     return ( 
         <Fragment>
