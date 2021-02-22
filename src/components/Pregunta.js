@@ -1,6 +1,6 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React,{Fragment, useState} from 'react';
-
+import Error from './Error';
 const Pregunta = () => {
 
     //definir el state
@@ -28,7 +28,7 @@ const Pregunta = () => {
     return ( 
         <Fragment>
             <h2>Coloca tu Presupuesto</h2>
-            {error ? "Error papi" : null}
+            {error ? <Error mensaje="El presupuesto es Incorrecto"/> : null}
             <form onSubmit={agregarPresupuesto}>
                 <input
                     type="number"
