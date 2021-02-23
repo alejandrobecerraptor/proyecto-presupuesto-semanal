@@ -6,7 +6,7 @@ const Listado = ({gastos}) => (
         <h2>Listado</h2>
         {gastos.map(gasto =>(
             <Gasto
-                ket={gasto.id}
+                key = {gasto.id}
                 gasto = {gasto}
             />
         ))}

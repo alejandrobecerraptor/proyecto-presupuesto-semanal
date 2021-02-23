@@ -1,4 +1,3 @@
-import { getDefaultNormalizer } from '@testing-library/react';
 import React,{Fragment, useState} from 'react';
 import Error from './Error';
 const Pregunta = ({guardarPresupuesto,guardarRestante,actualizarPregunta}) => {

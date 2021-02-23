@@ -34,7 +34,7 @@ function App() {
       //resetear a false
       guardarCrearGasto(false);
     }
-  }, [gasto]);
+  }, [gasto, crearGasto, gastos, restante]);
 
   return (
     <div className="container">
