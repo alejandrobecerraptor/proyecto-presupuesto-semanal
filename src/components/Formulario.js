@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Error from './Error';
+import shortid from 'shortid';
 
 const Formulario = () => {
     // state para el nombre del gasto
@@ -14,14 +15,21 @@ const Formulario = () => {
         e.preventDefault();
 
         //validar
+
         if(cantidad < 1 || isNaN(cantidad) || nombre.trim() === ''){
             guardarError(true);
             return;
         }
         guardarError(false);
-        //construir el gasto
-        
 
+        //construir el gasto
+
+        const gasto ={
+            nombre,
+            cantidad,
+            id: shortid.generate()
+        }
+        
         //pasar el gasto al componente principal
 
         //reset el form
