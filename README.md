@@ -19,7 +19,7 @@ Facil primero lo clonas con este comando:
 
 ## `git clone https://github.com/alejandrobecerraptor/proyecto-presupuesto-semanal.git`
 
-_Despues de eso te toca descargar las dependencias con:_⚙️
+_Despues de eso te toca descargar las dependencias con:_ ⚙️
 
 ## `npm install`
 
@@ -30,8 +30,6 @@ _luego tendras que arrancar el proyecto y para eso necesitas ejecutar el comando
 y listo disfruta! 🍦
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [ReactJs](https://reactjs.org/) - Libreria de JavaScript
 * [NPM](https://nodejs.org/es/download/) - Manejador de dependencias
